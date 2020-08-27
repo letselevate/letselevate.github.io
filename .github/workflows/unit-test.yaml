@@ -1,4 +1,4 @@
-name: run tests
+name: unit tests
 
 on: pull_request
 
@@ -10,5 +10,5 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '12'
-      - name: Run all tests
-        run: npm t
+      - name: Run unit tests
+        run: npm run test:unit
