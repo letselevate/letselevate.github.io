@@ -1,5 +1,8 @@
 module.exports = {
-  purge: [],
+  purge: [
+    './src/**/*.vue',
+    './src/**/*.js',
+  ],
   theme: {
     extend: {
       fontSize: {
