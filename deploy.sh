@@ -3,6 +3,9 @@
 # abort on errors
 set -e
 
+# install 
+npm i --production
+
 # build
 NODE_ENV=production npm run build
 
