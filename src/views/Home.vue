@@ -1,7 +1,18 @@
 <template>
-  <h1 class="text-red-700">hello</h1>
+  <div class="w-3/4 mx-auto">
+    <AppHeader />
+    <HeroSection />
+  </div>
 </template>
 
 <script>
-export default {}
+import AppHeader from '@/components/AppHeader.vue'
+import HeroSection from '@/components/sections/Hero.vue'
+export default {
+  name: 'Home',
+  components: {
+    AppHeader,
+    HeroSection
+  }
+}
 </script>
