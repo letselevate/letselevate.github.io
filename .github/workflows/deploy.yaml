@@ -1,4 +1,4 @@
-name: Deploy to gh-pages
+name: Deploy
 
 on:
   push:
@@ -13,4 +13,5 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '12'
+      - name: Deploy to gh-pages
         run: npm run deploy
