@@ -4,7 +4,7 @@
 set -e
 
 # build
-npm run build
+NODE_ENV=production npm run build
 
 cat CNAME > ./dist/CNAME
 
@@ -16,6 +16,6 @@ git add -A
 git commit -m ':rocket:'
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:elevatte/elevatte.github.io.git HEAD:gh-pages
+git push -f git@github.com:elevatte/elevatte.github.io.git master:gh-pages
 
 cd -
