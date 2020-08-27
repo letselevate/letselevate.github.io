@@ -10,7 +10,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '12'
+      - name: Install dependencies
+        run: npm i
       - name: Run e2e tests
-        run: |
-          npm ci
-          npm run test:e2e
+        run: npm run test:e2e
