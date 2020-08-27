@@ -11,6 +11,6 @@ jobs:
         with:
           node-version: '12'
       - name: Run unit tests
-      - run: |
+        run: |
           npm ci
           npm run test:unit

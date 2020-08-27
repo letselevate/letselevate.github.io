@@ -11,6 +11,6 @@ jobs:
         with:
           node-version: '12'
       - name: Run e2e tests
-      - run: |
+        run: |
           npm ci
-          npm run test:unit
+          npm run test:e2e
