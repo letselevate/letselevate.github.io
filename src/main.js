@@ -7,4 +7,4 @@ import '@/scss/main.scss'
 
 Vue.createApp(App)
   .use(router)
-  .mount('#app')
+  .mount('body')
