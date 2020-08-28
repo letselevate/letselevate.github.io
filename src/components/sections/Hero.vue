@@ -2,7 +2,7 @@
   <section id="hero" class="mb-32">
     <div class="md:grid md:grid-cols-2 text-center md:text-left">
       <div class="md:mt-24">
-        <h1 class="font-bold md:text-5.5xl text-4xl leading-tight my-5">
+        <h1 class="font-bold md:text-5.5xl text-3xl leading-tight my-5">
           Você no controle
           <br class="invisible md:visible" />da sua carreira!
         </h1>

@@ -1,8 +1,9 @@
 <template>
-  <header id="home" class="py-8">
+  <header id="home" class="md:py-8 py-3">
     <div class="flex lg:justify-between justify-center">
       <a href="/">
-        <img class="mr-2 w-32 h-auto block" :src="logoImg" alt="Elevatte logo" />
+        <img class="w-32 h-auto md:block hidden" :src="logoImg" alt="Elevatte logo" />
+        <img class="w-20 h-auto md:hidden block" :src="logoIconWiImg" alt="Elevatte logo" />
       </a>
       <nav id="header-menu" class="hidden lg:flex">
         <ul class="text-md font-normal text-gray-600 list-none">
@@ -18,7 +19,9 @@
             >
           </li>
           <li class="inline mx-8">
-            <a href="#blog" :class="[selectedItem === '#blog' ? highlightedClass : '', itemClass]">Blog</a>
+            <a href="http://blog.elevatte.me" target="_blank" :class="[itemClass, 'font-semibold text-blue-600']"
+              >Blog</a
+            >
           </li>
         </ul>
       </nav>
@@ -28,12 +31,14 @@
 
 <script>
 import logoImg from '@/assets/img/logo.png'
+import logoIconWiImg from '@/assets/img/logo-wi.png'
 
 export default {
   name: 'AppHeader',
   data: function() {
     return {
       logoImg,
+      logoIconWiImg,
       selectedItem: '#home',
       itemClass: 'text-xs uppercase',
       highlightedClass: 'font-bold text-black'

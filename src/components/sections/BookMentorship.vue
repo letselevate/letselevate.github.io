@@ -30,7 +30,7 @@
         </fieldset>
         <fieldset class="my-6">
           <input
-            type="text"
+            type="tel"
             placeholder="Telefone"
             :class="[
               errors.phone ? 'border-red-600' : 'border-primary',
@@ -52,7 +52,7 @@
         <Alert
           v-if="showAlert && !errors.onSubmit"
           :title="`Muito obrigado ${name}!`"
-          message="Verifique seu email para baixar o e-book e saber dos próximos passos"
+          message="Verifique seu email para baixar o ebook e saber dos próximos passos"
           type="success"
         />
       </form>
