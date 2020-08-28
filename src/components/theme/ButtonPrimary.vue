@@ -11,7 +11,8 @@
 export default {
   data: function() {
     return {
-      defaultClasses: 'rounded-full bg-primary text-white font-bold py-4 px-10 text-base w-full lg:w-auto'
+      defaultClasses:
+        'rounded-full bg-primary text-white font-bold py-4 px-10 text-base w-full lg:w-auto hover:bg-blue-dark'
     }
   },
   props: {
