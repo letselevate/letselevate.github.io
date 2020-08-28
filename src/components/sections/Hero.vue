@@ -10,7 +10,7 @@
           Empodere-se da sua jornada e seja destaque
           <br class="invisible md:visible" />nos processos seletivos com a elevatte
         </p>
-        <div class="my-20">
+        <div class="my-12">
           <ButtonPrimary :isLink="true" href="#book-mentorship">Agendar mentoria</ButtonPrimary>
         </div>
       </div>
