@@ -1,5 +1,6 @@
 const primaryColorHex = '#3271FC'
-const blueSoftColorHex = '#F0F5FF'
+const blueLighthColorHex = '#F0F5FF'
+const blueDarkColorHex = '#1B3DEC'
 
 module.exports = {
   purge: ['./src/**/*.vue', './src/**/*.js'],
@@ -13,7 +14,8 @@ module.exports = {
       },
       backgroundColor: {
         primary: primaryColorHex,
-        'blue-soft': blueSoftColorHex
+        'blue-light': blueLighthColorHex,
+        'blue-dark': blueDarkColorHex
       },
       borderColor: {
         primary: primaryColorHex
