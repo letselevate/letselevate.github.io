@@ -4,7 +4,7 @@
     <div class="flex justify-center mx-24">
       <BlogPost v-for="post in posts" :post="post" :key="post.title" />
     </div>
-    <div class="my-20">
+    <div class="mt-20 mb-56">
       <Button :isLink="true" type="secondary" href="http://blog.elevatte.me/" target="_blank">Ver mais</Button>
     </div>
   </section>
