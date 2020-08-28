@@ -37,6 +37,7 @@
               'border-2  bg-blue-light p-4 rounded-lg placeholder-blue-500 w-full'
             ]"
             v-model="phone"
+            v-maska="'(##) # ####-####'"
           />
           <FormInputError :error="errors.phone" />
         </fieldset>
@@ -68,6 +69,8 @@ import FormInputError from '@/components/theme/FormInputError'
 import BookMentorshipText from '@/components/BookMentorshipText'
 import leadsApi from '@/api/leads'
 import socialConfig from '@/config/social'
+import { maska } from 'maska'
+
 
 export default {
   name: 'BookMentorship',
@@ -75,6 +78,7 @@ export default {
   data: function() {
     return { ...this.resetData(), contactEmail: socialConfig.email, showAlert: false }
   },
+  directives: { maska },
   methods: {
     resetData() {
       return {
