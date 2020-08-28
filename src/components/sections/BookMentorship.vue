@@ -1,38 +1,49 @@
 <template>
   <section id="book-mentorship" class="my-40">
-    <div class="flex justify-center mx-12">
+    <div class="flex justify-center mx-6">
       <!-- FIX: Mover inputs para componente FormInput com 2way data binding -->
-      <form @submit.prevent>
+      <form @submit.prevent class="w-1/2 mx-16 mt-5">
         <fieldset class="my-6">
           <input
             type="text"
             placeholder="Nome"
-            required="true"
-            class="border-2 border-primary bg-blue-soft p-4 rounded-lg placeholder-blue-500"
+            :class="[
+              errors.name ? 'border-red-600' : 'border-primary',
+              'border-2  bg-blue-light p-4 rounded-lg placeholder-blue-500 w-full'
+            ]"
             v-model="name"
           />
+          <FormInputError :error="errors.name" />
         </fieldset>
         <fieldset class="my-6">
           <input
-            type="email"
+            type="text"
             placeholder="Email"
-            required="true"
-            class="border-2 border-primary bg-blue-soft p-4 rounded-lg placeholder-blue-500"
+            :class="[
+              errors.email ? 'border-red-600' : 'border-primary',
+              'border-2  bg-blue-light p-4 rounded-lg placeholder-blue-500 w-full'
+            ]"
             v-model="email"
           />
+          <FormInputError :error="errors.email" />
         </fieldset>
         <fieldset class="my-6">
           <input
-            type="tel"
+            type="text"
             placeholder="Telefone"
-            required="true"
-            class="border-2 border-primary bg-blue-soft p-4 rounded-lg placeholder-blue-500"
+            :class="[
+              errors.phone ? 'border-red-600' : 'border-primary',
+              'border-2  bg-blue-light p-4 rounded-lg placeholder-blue-500 w-full'
+            ]"
             v-model="phone"
           />
+          <FormInputError :error="errors.phone" />
         </fieldset>
-        <ButtonPrimary type="submit" @click="createLead">Agendar mentoria</ButtonPrimary>
+        <fieldset class="my-6 text-center">
+          <ButtonPrimary type="submit" @click="createLead">Agendar mentoria</ButtonPrimary>
+        </fieldset>
       </form>
-      <div>
+      <div class="w-1/2 mx-10">
         <h3 class="font-bold text-4xl leading-tight my-5">
           Faça parte dos
           <span class="text-primary">2%</span> melhores
@@ -41,14 +52,14 @@
           Agende uma mentoria agora e receba nosso
           <span class="text-primary">e-book</span> exclusivo!
         </h3>
-        <p class="font-light text-lg text-gray-600 my-3 leading-tight">
+        <p class="font-light text-base text-gray-600 my-3 leading-tight">
           Você já teve a sensação de ser invisível nos processos seletivos?
         </p>
-        <p class="font-light text-lg text-gray-600 my-3 leading-tight">
+        <p class="font-light text-base text-gray-600 my-3 leading-tight">
           Saiba que muitas pessoas passam por isso diariamente e até
           <b>98%</b> dos currículos são rejeitados na primeira etapa do processo.
         </p>
-        <p class="font-light text-lg text-gray-600 my-3 leading-tight">
+        <p class="font-light text-base text-gray-600 my-3 leading-tight">
           Através da mentoria qualificada da elevatte suas chances de conseguir o emprego dos sonhos aumentam em até
           60%.
         </p>
@@ -59,20 +70,28 @@
 
 <script>
 import ButtonPrimary from '@/components/theme/ButtonPrimary'
+import FormInputError from '@/components/theme/FormInputError'
 
 export default {
   name: 'BookMentorship',
-  components: { ButtonPrimary },
+  components: { ButtonPrimary, FormInputError },
   data: function() {
     return {
       name: '',
       email: '',
-      phone: ''
+      phone: '',
+      errors: {}
     }
   },
   methods: {
     createLead: function() {
-      console.log(this.name, this.email, this.phone)
+      this.errors.name = this.name ? false : 'Nome deve ser preenchido'
+      this.errors.email = this.email ? false : 'Email deve ser preenchido'
+      this.errors.phone = this.phone ? false : 'Telefone deve ser preenchido'
+
+      if (!this.errors.name || !this.errors.email || !this.errors.phone) {
+        console.log('create lead', this.name, this.email, this.phone)
+      }
     }
   }
 }
