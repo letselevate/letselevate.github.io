@@ -1,7 +1,7 @@
 const {
   ELVT_SOCIAL_EMAIL = 'elevatte@letselevate.com.br',
-  ELVT_SOCIAL_LINKEDIN = 'https://linkedin.com/company/elevatte',
   ELVT_SOCIAL_GITHUB = 'https://github.com/elevatte',
+  ELVT_SOCIAL_LINKEDIN = 'https://linkedin.com/company/elevatte',
   ELVT_SOCIAL_INSTAGRAM = 'https://instagram.com/elevatte.app'
 } = process.env
 
