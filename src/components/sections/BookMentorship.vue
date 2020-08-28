@@ -42,6 +42,18 @@
         <fieldset class="my-6 text-center">
           <Button @click="createLead">Agendar mentoria</Button>
         </fieldset>
+        <Alert
+          v-if="showAlert && errors.onSubmit"
+          title="Ops algo deu errado!"
+          :message="`Você ainda pode entrar em contato conosco através do email ${contactEmail}`"
+          type="error"
+        />
+        <Alert
+          v-if="showAlert && !errors.onSubmit"
+          :title="`Muito obrigado ${name}!`"
+          message="Verifique seu email para baixar o e-book e saber dos próximos passos"
+          type="success"
+        />
       </form>
       <div class="w-1/2 mx-10">
         <h3 class="font-bold text-4xl leading-tight my-5">
@@ -70,27 +82,42 @@
 
 <script>
 import Button from '@/components/theme/Button'
+import Alert from '@/components/theme/Alert'
 import FormInputError from '@/components/theme/FormInputError'
+import leadsApi from '@/api/leads'
+import socialConfig from '@/config/social'
 
 export default {
   name: 'BookMentorship',
-  components: { Button, FormInputError },
+  components: { Button, FormInputError, Alert },
   data: function() {
-    return {
-      name: '',
-      email: '',
-      phone: '',
-      errors: {}
-    }
+    return { ...this.resetData(), contactEmail: socialConfig.email, showAlert: false }
   },
   methods: {
-    createLead: function() {
+    resetData() {
+      return {
+        name: '',
+        email: '',
+        phone: '',
+        errors: {}
+      }
+    },
+    async createLead() {
+      this.showAlert = false
       this.errors.name = this.name ? false : 'Nome deve ser preenchido'
       this.errors.email = this.email ? false : 'Email deve ser preenchido'
       this.errors.phone = this.phone ? false : 'Telefone deve ser preenchido'
 
-      if (!this.errors.name || !this.errors.email || !this.errors.phone) {
-        console.log('create lead', this.name, this.email, this.phone)
+      if (!this.errors.name && !this.errors.email && !this.errors.phone) {
+        try {
+          await leadsApi.create({ name: this.name, email: this.email, phone: this.phone })
+          this.showAlert = true
+          Object.assign(this, this.resetData())
+        } catch (err) {
+          this.errors.onSubmit = true
+          this.showAlert = true
+          console.error(err)
+        }
       }
     }
   }
