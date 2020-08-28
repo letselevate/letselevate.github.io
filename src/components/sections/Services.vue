@@ -1,11 +1,11 @@
 <template>
-  <section class="text-center">
+  <section id="services" class="my-16 text-center">
     <!-- TODO: Transformar esse texto de sessão em componente -->
     <div class="w-1/3 mx-auto mb-12">
-      <h2 class="font-medium text-2xl">Nossos serviços</h2>
+      <h2 class="font-medium text-3xl">Nossos serviços</h2>
       <hr class="w-16 mx-auto my-8 border-2 border-primary" />
       <p class="font-light text-base text-gray-600">
-        Desenhamos o método de crescimento profissional com o objetivo de alavancar a sua carreira
+        Desenhamos o método de crescimento profissional ideal com o objetivo de alavancar a sua carreira
       </p>
     </div>
     <div class="flex justify-center mx-24">
@@ -31,7 +31,7 @@
         <h3 class="text-2xl font-medium my-3">Storytelling de Currículo</h3>
         <p class="font-light text-sm text-gray-600">
           Você não precisa mais se preocupar em fazer currículos, o nosso time de especialistas irá revisar e criar
-          currículos para você que poderão aumentar o seu engajamento nos processos de recrutamento
+          currículos para você que irão aumentar suas chances de ser chamado para uma entrevista
         </p>
       </div>
     </div>

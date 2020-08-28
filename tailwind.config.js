@@ -1,18 +1,22 @@
+const primaryColorHex = '#3271FC'
+const blueSoftColorHex = '#F0F5FF'
+
 module.exports = {
-  purge: [
-    './src/**/*.vue',
-    './src/**/*.js',
-  ],
+  purge: ['./src/**/*.vue', './src/**/*.js'],
   theme: {
     extend: {
       fontSize: {
         '5.5xl': '3.5rem'
       },
+      textColor: {
+        primary: primaryColorHex
+      },
       backgroundColor: {
-        primary: '#3271FC'
+        primary: primaryColorHex,
+        'blue-soft': blueSoftColorHex
       },
       borderColor: {
-        primary: '#3271FC'
+        primary: primaryColorHex
       },
       borderRadius: {
         xlg: '1.3rem'

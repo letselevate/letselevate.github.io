@@ -1,28 +1,30 @@
 <template>
-  <AppHeader :class="defaultContainer" />
-  <main>
-    <HeroSection :class="`${defaultContainer} ${defaultSectionSpacing}`" />
-    <ServicesSection :class="`${defaultContainer} ${defaultSectionSpacing}`" />
+  <AppHeader :class="virtualContainer" />
+  <main :class="virtualContainer">
+    <HeroSection />
+    <ServicesSection />
+    <BookMentorshipSection />
   </main>
 </template>
 
 <script>
-import AppHeader from '@/components/AppHeader.vue'
-import HeroSection from '@/components/sections/Hero.vue'
-import ServicesSection from '@/components/sections/Services.vue'
+import AppHeader from '@/components/AppHeader'
+import HeroSection from '@/components/sections/Hero'
+import ServicesSection from '@/components/sections/Services'
+import BookMentorshipSection from '@/components/sections/BookMentorship'
 
 export default {
   name: 'Home',
   data: function() {
     return {
-      defaultContainer: 'w-2/3 mx-auto',
-      defaultSectionSpacing: 'mb-32'
+      virtualContainer: 'w-2/3 mx-auto'
     }
   },
   components: {
     AppHeader,
     HeroSection,
-    ServicesSection
+    ServicesSection,
+    BookMentorshipSection
   }
 }
 </script>

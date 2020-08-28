@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section id="hero" class="mb-32">
     <div class="grid md:grid-cols-2 grid-cols-1">
       <div class="mt-12 md:mt-24">
         <h1 class="font-bold text-5.5xl leading-tight my-5">
@@ -11,9 +11,7 @@
           <br class="invisible md:visible" />nos processos seletivos com a elevatte
         </p>
         <div class="my-20">
-          <a href="#book-mentorship" class="rounded-full bg-primary text-white py-4 px-10 text-base w-full lg:w-auto"
-            >Agendar mentoria</a
-          >
+          <ButtonPrimary :isLink="true" href="#book-mentorship">Agendar mentoria</ButtonPrimary>
         </div>
       </div>
       <figure class="invisible md:visible">
@@ -25,8 +23,13 @@
 
 <script>
 import heroArt from '@/assets/img/hero-art.svg'
+import ButtonPrimary from '@/components/theme/ButtonPrimary'
+
 export default {
   name: 'Hero',
+  components: {
+    ButtonPrimary
+  },
   data: function() {
     return {
       heroArt
