@@ -11,7 +11,7 @@
           <br class="invisible md:visible" />nos processos seletivos com a elevatte
         </p>
         <div class="my-12">
-          <ButtonPrimary :isLink="true" href="#book-mentorship">Agendar mentoria</ButtonPrimary>
+          <Button :isLink="true" href="#book-mentorship">Agendar mentoria</Button>
         </div>
       </div>
       <figure class="invisible md:visible">
@@ -23,12 +23,12 @@
 
 <script>
 import heroArt from '@/assets/img/hero-art.svg'
-import ButtonPrimary from '@/components/theme/ButtonPrimary'
+import Button from '@/components/theme/Button'
 
 export default {
   name: 'Hero',
   components: {
-    ButtonPrimary
+    Button
   },
   data: function() {
     return {

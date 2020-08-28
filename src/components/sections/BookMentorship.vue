@@ -40,7 +40,7 @@
           <FormInputError :error="errors.phone" />
         </fieldset>
         <fieldset class="my-6 text-center">
-          <ButtonPrimary type="submit" @click="createLead">Agendar mentoria</ButtonPrimary>
+          <Button @click="createLead">Agendar mentoria</Button>
         </fieldset>
       </form>
       <div class="w-1/2 mx-10">
@@ -48,7 +48,7 @@
           Faça parte dos
           <span class="text-primary">2%</span> melhores
         </h3>
-        <h3 class="font-semibold text-xl leading-tight my-3 text-gray-700">
+        <h3 class="font-semibold text-xl leading-tight mt-3 mb-6 text-gray-700">
           Agende uma mentoria agora e receba nosso
           <span class="text-primary">e-book</span> exclusivo!
         </h3>
@@ -69,12 +69,12 @@
 </template>
 
 <script>
-import ButtonPrimary from '@/components/theme/ButtonPrimary'
+import Button from '@/components/theme/Button'
 import FormInputError from '@/components/theme/FormInputError'
 
 export default {
   name: 'BookMentorship',
-  components: { ButtonPrimary, FormInputError },
+  components: { Button, FormInputError },
   data: function() {
     return {
       name: '',
