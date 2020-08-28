@@ -15,17 +15,17 @@
         </div>
         <ul class="flex float-right py-5">
           <li class="inline mx-2">
-            <a :href="linkedin">
+            <a :href="linkedin" target="_blank">
               <img :src="linkedinIcon" class="w-5 h-auto" alt="Linkedin elevatte" />
             </a>
           </li>
           <li class="inline mx-2">
-            <a :href="github">
+            <a :href="github" target="_blank">
               <img :src="githubIcon" class="w-5 h-auto" alt="Github elevatte" />
             </a>
           </li>
           <li class="inline mx-2">
-            <a :href="instagram">
+            <a :href="instagram" target="_blank">
               <img :src="instagramIcon" class="w-5 h-auto" alt="Instagram elevatte" />
             </a>
           </li>
