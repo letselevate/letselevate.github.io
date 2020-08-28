@@ -10,7 +10,8 @@ module.exports = {
         '5.5xl': '3.5rem'
       },
       textColor: {
-        primary: primaryColorHex
+        primary: primaryColorHex,
+        'blue-dark': blueDarkColorHex
       },
       backgroundColor: {
         primary: primaryColorHex,
