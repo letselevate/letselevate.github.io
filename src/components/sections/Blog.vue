@@ -1,10 +1,10 @@
 <template>
-  <section id="blog" class="mt-16 mb-32 text-center">
+  <section id="blog" class="mt-16 md:mb-56 mb-16 text-center">
     <SectionHeader header="Confira nossos artigos" class="text-center" />
-    <div class="flex justify-center mx-24">
+    <div class="md:flex md:justify-center md:mx-24">
       <BlogPost v-for="post in posts" :post="post" :key="post.title" />
     </div>
-    <div class="mt-20 mb-56">
+    <div class="mt-20">
       <Button :isLink="true" type="secondary" href="http://blog.elevatte.me/" target="_blank">Ver mais</Button>
     </div>
   </section>

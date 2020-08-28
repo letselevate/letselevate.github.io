@@ -4,9 +4,9 @@
       header="Nossos serviços"
       subHeader="Desenhamos o método de crescimento profissional ideal com o objetivo de alavancar a sua carreira"
     />
-    <div class="flex justify-center mx-24">
+    <div class="md:flex md:justify-center md:mx-24">
       <!-- TODO: mover esses cards para um componente -->
-      <div class="bg-white shadow-linear rounded-xlg w-3/4 mx-8 h-auto py-10 px-16">
+      <div class="bg-white shadow-linear rounded-xlg md:w-3/4 w-full md:mx-8 mb-10 h-auto md:py-10 md:px-16 py-5 px-8">
         <figure>
           <img :src="growthArt" class="h-40 w-auto my-5 mx-auto" alt="Homem subindo escada para alcançar bandeira" />
         </figure>
@@ -16,7 +16,7 @@
           profissional, podendo ter até 10 vezes mais engajamento nos processos seletivos
         </p>
       </div>
-      <div class="bg-white shadow-linear rounded-xlg w-3/4 mx-8 h-auto py-10 px-16">
+      <div class="bg-white shadow-linear rounded-xlg md:w-3/4 w-full md:mx-8 mb-10 h-auto md:py-10 md:px-16 py-5 px-8">
         <figure>
           <img
             :src="storytellingArt"

@@ -1,8 +1,9 @@
 <template>
-  <section id="book-mentorship" class="my-40">
-    <div class="flex justify-center mx-6">
+  <section id="book-mentorship" class="md:my-40 my-20">
+    <div class="md:flex md:justify-center md:mx-6 m-0">
       <!-- FIX: Mover inputs para componente FormInput com 2way data binding -->
-      <form @submit.prevent class="w-1/2 mx-16 mt-5">
+      <BookMentorshipText class="md:hidden block" />
+      <form @submit.prevent class="md:w-1/2 w-full md:mx-16 mt-5">
         <fieldset class="my-6">
           <input
             type="text"
@@ -55,27 +56,7 @@
           type="success"
         />
       </form>
-      <div class="w-1/2 mx-10">
-        <h3 class="font-bold text-4xl leading-tight my-5">
-          Faça parte dos
-          <span class="text-primary">2%</span> melhores
-        </h3>
-        <h3 class="font-semibold text-xl leading-tight mt-3 mb-6 text-gray-700">
-          Agende uma mentoria agora e receba nosso
-          <span class="text-primary">e-book</span> exclusivo!
-        </h3>
-        <p class="font-light text-base text-gray-600 my-3 leading-tight">
-          Você já teve a sensação de ser invisível nos processos seletivos?
-        </p>
-        <p class="font-light text-base text-gray-600 my-3 leading-tight">
-          Saiba que muitas pessoas passam por isso diariamente e até
-          <b>98%</b> dos currículos são rejeitados na primeira etapa do processo.
-        </p>
-        <p class="font-light text-base text-gray-600 my-3 leading-tight">
-          Através da mentoria qualificada da elevatte suas chances de conseguir o emprego dos sonhos aumentam em até
-          60%.
-        </p>
-      </div>
+      <BookMentorshipText class="hidden md:block" />
     </div>
   </section>
 </template>
@@ -84,12 +65,13 @@
 import Button from '@/components/theme/Button'
 import Alert from '@/components/theme/Alert'
 import FormInputError from '@/components/theme/FormInputError'
+import BookMentorshipText from '@/components/BookMentorshipText'
 import leadsApi from '@/api/leads'
 import socialConfig from '@/config/social'
 
 export default {
   name: 'BookMentorship',
-  components: { Button, FormInputError, Alert },
+  components: { Button, FormInputError, BookMentorshipText, Alert },
   data: function() {
     return { ...this.resetData(), contactEmail: socialConfig.email, showAlert: false }
   },

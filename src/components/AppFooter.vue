@@ -1,9 +1,9 @@
 <template>
-  <footer class="h-56 w-full py-5 bg-primary flex items-center text-white">
+  <footer class="md:h-56 w-full py-5 bg-primary flex items-center text-white">
     <div :class="`${innerSpacingClass} flex justify-between`">
-      <figure class="w-1/3">
+      <figure class="md:w-1/3 w-1/2">
         <img :src="logoWhite" class="w-auto h-12" alt="Elevatte logo" />
-        <p class="py-1 text-white text-xs font-light">
+        <p class="py-1 text-white text-xs font-light md:block hidden">
           Com o Growth de carreira da elevatte, você irá se destacar no mercado de trabalho usando técnicas avançadas
           para desenvolvimento do seu perfil profissional.
         </p>

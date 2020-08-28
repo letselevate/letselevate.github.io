@@ -21,7 +21,7 @@ export default {
   name: 'Home',
   data: function() {
     return {
-      virtualContainer: 'w-2/3 mx-auto'
+      virtualContainer: 'md:w-2/3 w-3/4 mx-auto'
     }
   },
   components: {
