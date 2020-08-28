@@ -1,22 +1,24 @@
 <template>
-  <header class="py-8">
+  <header id="home" class="py-8">
     <div class="flex lg:justify-between justify-center">
       <a href="/">
-        <img class="mr-2" id="header-logo" :src="logoImg" alt="Elevatte logo" />
+        <img class="mr-2 w-32 h-auto block" :src="logoImg" alt="Elevatte logo" />
       </a>
       <nav id="header-menu" class="hidden lg:flex">
         <ul class="text-md font-normal text-gray-600 list-none">
           <li class="inline mx-8">
-            <a href="#header" class="font-bold text-black">Home</a>
+            <a href="#home" :class="[selectedItem === '#home' ? highlightedClass : '', itemClass]">Home</a>
           </li>
           <li class="inline mx-8">
-            <a href="#solutions">Serviços</a>
+            <a href="#services" :class="[selectedItem === '#services' ? highlightedClass : '', itemClass]">Serviços</a>
           </li>
           <li class="inline mx-8">
-            <a href="#book-mentorship">Agendar mentoria</a>
+            <a href="#book-mentorship" :class="[selectedItem === '#book-mentorship' ? highlightedClass : '', itemClass]"
+              >Agendar mentoria</a
+            >
           </li>
           <li class="inline mx-8">
-            <a href="#blog">Blog</a>
+            <a href="#blog" :class="[selectedItem === '#blog' ? highlightedClass : '', itemClass]">Blog</a>
           </li>
         </ul>
       </nav>
@@ -31,16 +33,16 @@ export default {
   name: 'AppHeader',
   data: function() {
     return {
-      logoImg
+      logoImg,
+      selectedItem: '#home',
+      itemClass: 'text-xs uppercase',
+      highlightedClass: 'font-bold text-black'
+    }
+  },
+  watch: {
+    $route: function(route) {
+      this.selectedItem = route.hash
     }
   }
 }
 </script>
-
-<style lang="scss">
-#header-logo {
-  width: 8rem;
-  display: block;
-  height: auto;
-}
-</style>
