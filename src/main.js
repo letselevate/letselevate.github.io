@@ -7,4 +7,4 @@ import '@/scss/main.scss'
 
 Vue.createApp(App)
   .use(router)
-  .mount('body')
+  .mount('body') // A ideia de carregar no body é para fica mais SEO friendly

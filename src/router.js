@@ -1,4 +1,5 @@
 import * as VueRouter from 'vue-router'
+import Home from '@/views/Home'
 
 const router = VueRouter.createRouter({
   history: VueRouter.createWebHistory(),
@@ -6,7 +7,7 @@ const router = VueRouter.createRouter({
     {
       path: '',
       name: 'home',
-      component: () => import('./views/Home.vue')
+      component: Home
     }
   ]
 })
