@@ -1,13 +1,9 @@
 <template>
   <section id="services" class="my-16 text-center">
-    <!-- TODO: Transformar esse texto de sessão em componente -->
-    <div class="w-1/3 mx-auto mb-12">
-      <h2 class="font-medium text-3xl">Nossos serviços</h2>
-      <hr class="w-16 mx-auto my-8 border-2 border-primary" />
-      <p class="font-light text-base text-gray-600">
-        Desenhamos o método de crescimento profissional ideal com o objetivo de alavancar a sua carreira
-      </p>
-    </div>
+    <SectionHeader
+      header="Nossos serviços"
+      subHeader="Desenhamos o método de crescimento profissional ideal com o objetivo de alavancar a sua carreira"
+    />
     <div class="flex justify-center mx-24">
       <!-- TODO: mover esses cards para um componente -->
       <div class="bg-white shadow-linear rounded-xlg w-3/4 mx-8 h-auto py-10 px-16">
@@ -41,12 +37,17 @@
 <script>
 import growthArt from '@/assets/img/growth-art.svg'
 import storytellingArt from '@/assets/img/storytelling-art.svg'
+import SectionHeader from '@/components/theme/SectionHeader'
+
 export default {
   data: function() {
     return {
       growthArt,
       storytellingArt
     }
+  },
+  components: {
+    SectionHeader
   }
 }
 </script>
