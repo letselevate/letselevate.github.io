@@ -31,19 +31,22 @@
         </p>
       </div>
     </div>
+    <!-- <img :src="servicesBgArt" class="z-none" /> -->
   </section>
 </template>
 
 <script>
 import growthArt from '@/assets/img/growth-art.svg'
 import storytellingArt from '@/assets/img/storytelling-art.svg'
+import servicesBgArt from '@/assets/img/services-bg-art.svg'
 import SectionHeader from '@/components/theme/SectionHeader'
 
 export default {
   data: function() {
     return {
       growthArt,
-      storytellingArt
+      storytellingArt,
+      servicesBgArt
     }
   },
   components: {

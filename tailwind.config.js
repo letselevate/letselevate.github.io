@@ -6,6 +6,9 @@ module.exports = {
   purge: ['./src/**/*.vue', './src/**/*.js'],
   theme: {
     extend: {
+      zIndex: {
+        none: '-1'
+      },
       fontSize: {
         '5.5xl': '3.5rem'
       },
