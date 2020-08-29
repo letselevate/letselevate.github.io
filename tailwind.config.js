@@ -6,6 +6,9 @@ module.exports = {
   purge: ['./src/**/*.vue', './src/**/*.js'],
   theme: {
     extend: {
+      height: {
+        'max-content': 'max-content'
+      },
       zIndex: {
         none: '-1'
       },
