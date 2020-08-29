@@ -24,4 +24,12 @@ jobs:
           git config --global user.email $bot_email
           git config --global user.name $bot_username
       - name: deploy to gh-pages
-        run: npm run deploy
+        run: |
+          npm i
+          NODE_ENV=production npm run build
+          cat CNAME > ./dist/CNAME
+          cd dist
+          git init
+          git add -A
+          git commit -m "🚀 Deploy id ${GITHUB_RUN_ID}"
+          git push -f https://github.com/elevatte/elevatte.github.io.git master:gh-pages
