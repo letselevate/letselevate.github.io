@@ -1,16 +1,16 @@
-name: e2e tests
+name: lint
 
 on: pull_request
 
 jobs:
-  build:
+  lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
       - uses: actions/setup-node@v1
         with:
           node-version: '12'
-      - name: Install dependencies
+      - name: install dependencies
         run: npm i
-      - name: Run e2e tests
-        run: npm run test:e2e
+      - name: run linter
+        run: npm run lint:check

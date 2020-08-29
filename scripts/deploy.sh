@@ -4,7 +4,7 @@
 set -e
 
 # install 
-npm i --production
+npm i
 
 # build
 NODE_ENV=production npm run build

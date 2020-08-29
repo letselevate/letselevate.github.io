@@ -1,5 +1,7 @@
 # elevatte.github.io
 
+![deploy](https://github.com/elevatte/elevatte.github.io/workflows/deploy/badge.svg?branch=master)
+
 ## Project setup
 ```
 npm install
