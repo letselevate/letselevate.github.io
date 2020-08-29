@@ -10,7 +10,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '12'
-      - name: Install dependencies
+      - name: install dependencies
         run: npm i
-      - name: Check code style
+      - name: run linter
         run: npm run lint:check

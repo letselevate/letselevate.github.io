@@ -10,7 +10,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '12'
-      - name: Install dependencies
+      - name: install dependencies
         run: npm i
-      - name: Run unit tests
+      - name: run unit tests
         run: npm run test:unit
