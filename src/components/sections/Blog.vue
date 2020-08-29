@@ -40,7 +40,7 @@ export default {
             'Um bom currículo é um dos primeiros passos para encontrar um emprego, mas será que você alguma vez já se perguntou: “Meu currículo está bem feito?”',
           image: {
             src:
-              'https://images.unsplash.com/photo-1536060316316-2466bda904f1?ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;fm&#x3D;jpg&amp;crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;w&#x3D;2000&amp;fit&#x3D;max&amp;ixid&#x3D;eyJhcHBfaWQiOjExNzczfQ',
+              'https://res-4.cloudinary.com/hucbah0bl/image/upload/q_auto/v1/ghost-blog-images/photo-1536060316316-2466bda904f1.jpg',
             alt: 'Um quadro com texto "Youve got this", junto de um headset e um notebook'
           },
           url: 'http://blog.elevatte.me/10-dicas-para-montar-um-curriculo-atraente/'
