@@ -19,6 +19,6 @@ git add -A
 git commit -m ':rocket:'
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:elevatte/elevatte.github.io.git master:gh-pages
+git push -f https://github.com/elevatte/elevatte.github.io.git master:gh-pages
 
 cd -
