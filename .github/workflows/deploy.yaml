@@ -18,8 +18,8 @@ jobs:
           BOT_NAME: ${{ secrets.BOT_NAME }}
           BOT_EMAIL: ${{ secrets.BOT_EMAIL }}
         run: |
-          git config user.name "${BOT_NAME}"
-          git config user.email "${BOT_EMAIL}"
+          git config --global user.name "${BOT_NAME}"
+          git config --global user.email "${BOT_EMAIL}"
           echo $(git config --global -l)
       - name: deploy to gh-pages
         run: npm run deploy
