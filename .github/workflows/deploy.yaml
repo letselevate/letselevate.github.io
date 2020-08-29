@@ -13,5 +13,15 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '12'
-      - name: Deploy to gh-pages
+      - name: setup bot
+        env:
+          bot_username: '${{ secrets.BOT_USERNAME }}'
+          bot_email: '${{ secrets.BOT_EMAIL }}'
+          bot_access_token: '${{ secrets.BOT_ACCESS_TOKEN }}'
+        run: |
+          git config --global credential.helper store
+          echo "https://${bot_access_token}:x-oauth-basic@github.com" > ~/.git-credentials
+          git config --global user.email $bot_email
+          git config --global user.name $bot_username
+      - name: deploy to gh-pages
         run: npm run deploy
