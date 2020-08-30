@@ -33,6 +33,17 @@ export default {
             alt: 'Mãos apoiadas no macbook com uma agenda ao lado'
           },
           url: 'http://blog.elevatte.me/growth-de-carreira/'
+        },
+        {
+          title: '10 dicas para montar um currículo atreaente',
+          subject:
+            'Um bom currículo é um dos primeiros passos para encontrar um emprego, mas será que você alguma vez já se perguntou: “Meu currículo está bem feito?”',
+          image: {
+            src:
+              'https://res-4.cloudinary.com/hucbah0bl/image/upload/q_auto/v1/ghost-blog-images/photo-1536060316316-2466bda904f1.jpg',
+            alt: 'Um quadro com texto "Youve got this", junto de um headset e um notebook'
+          },
+          url: 'http://blog.elevatte.me/10-dicas-para-montar-um-curriculo-atraente/'
         }
       ]
     }

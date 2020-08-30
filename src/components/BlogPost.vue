@@ -1,7 +1,7 @@
 <template>
-  <article class="max-w-sm rounded-xlg overflow-hidden shadow-linear text-left">
+  <article class="max-w-sm h-max-content rounded-xlg overflow-hidden shadow-linear text-left md:m-8 mb-4 mx-auto">
     <a :href="post.url" target="_blank">
-      <img class="w-full" :src="post.image.src" :alt="post.image.alt" />
+      <img class="w-full h-48 object-cover" :src="post.image.src" :alt="post.image.alt" />
     </a>
     <div class="p-8">
       <div class="font-bold text-xl">{{ post.title }}</div>
