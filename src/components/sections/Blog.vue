@@ -1,7 +1,7 @@
 <template>
   <section id="blog" class="mt-16 md:mb-56 mb-16 text-center">
     <SectionHeader header="Confira nossos artigos" class="text-center" />
-    <div class="md:flex md:justify-center md:mx-24">
+    <div class="md:flex md:justify-center md:mx-6">
       <BlogPost v-for="post in posts" :post="post" :key="post.title" />
     </div>
     <div class="mt-20">
@@ -43,6 +43,16 @@ export default {
           image: {
             src: 'https://miro.medium.com/max/2160/1*mhW-IR7S3z9xkTWPHbY0cg.jpeg',
             alt: 'iMac sobre mesa do frase "Do More" na tela'
+          },
+          url: 'https://medium.com/elevatte/growth-de-carreira-b338b36c14e'
+        },
+        {
+          title: '10 Dicas para montar um currículo atraente',
+          subject:
+            'Um bom currículo é um dos primeiros passos para encontrar um emprego, mas será que você alguma vez já se perguntou: “Meu currículo está bem feito?”',
+          image: {
+            src: 'https://miro.medium.com/max/2160/1*nvK_JaRMB9a_sBsSqHI0Gw.jpeg',
+            alt: 'Quadro escrito "Youve got this" ao lado de um notebok em um tapete cor de rosa'
           },
           url: 'https://medium.com/elevatte/growth-de-carreira-b338b36c14e'
         }

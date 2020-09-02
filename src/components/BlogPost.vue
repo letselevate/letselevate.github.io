@@ -1,5 +1,5 @@
 <template>
-  <article class="max-w-sm h-max-content rounded-xlg overflow-hidden shadow-linear text-left md:m-8 mb-4 mx-auto">
+  <article class="w-full h-max-content rounded-xlg overflow-hidden shadow-linear text-left md:m-8 mb-4 mx-auto">
     <a :href="post.url" target="_blank">
       <img class="w-full h-48 object-cover" :src="post.image.src" :alt="post.image.alt" />
     </a>
