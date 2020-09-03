@@ -19,9 +19,7 @@
             >
           </li>
           <li class="inline mx-8">
-            <a href="http://blog.elevatte.me" target="_blank" :class="[itemClass, 'font-semibold text-blue-600']"
-              >Blog</a
-            >
+            <a :href="blogUrl" target="_blank" :class="[itemClass, 'font-semibold text-blue-600']">Blog</a>
           </li>
         </ul>
       </nav>
@@ -32,6 +30,7 @@
 <script>
 import logoImg from '@/assets/img/logo.png'
 import logoIconWiImg from '@/assets/img/logo-wi.png'
+import blogConfig from '@/config/blog.js'
 
 export default {
   name: 'AppHeader',
@@ -41,7 +40,8 @@ export default {
       logoIconWiImg,
       selectedItem: '#home',
       itemClass: 'text-xs uppercase',
-      highlightedClass: 'font-bold text-black'
+      highlightedClass: 'font-bold text-black',
+      blogUrl: blogConfig.url
     }
   },
   watch: {
