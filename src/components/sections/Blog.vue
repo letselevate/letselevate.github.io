@@ -54,7 +54,7 @@ export default {
             src: 'https://miro.medium.com/max/2160/1*nvK_JaRMB9a_sBsSqHI0Gw.jpeg',
             alt: 'Quadro escrito "Youve got this" ao lado de um notebok em um tapete cor de rosa'
           },
-          url: 'https://medium.com/elevatte/growth-de-carreira-b338b36c14e'
+          url: 'https://medium.com/elevatte/10-dicas-para-criar-um-curr%C3%ADculo-atraente-7d1af3d980d8'
         }
       ]
     }
