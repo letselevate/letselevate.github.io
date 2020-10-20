@@ -4,25 +4,26 @@
       <!-- FIX: Mover inputs para componente FormInput com 2way data binding -->
       <BookMentorshipText class="md:hidden block" />
       <form @submit.prevent class="md:w-1/2 w-full md:mx-16 mt-5">
-        <fieldset class="my-6">
+        <!-- <fieldset class="my-6">
           <input
             type="text"
             placeholder="Nome"
             :class="[
               errors.name ? 'border-red-600' : 'border-primary',
-              'border-2  bg-blue-light p-4 rounded-lg placeholder-blue-500 w-full'
+              'border-2 bg-blue-light p-4 rounded-lg placeholder-blue-500 w-full'
             ]"
             v-model="name"
           />
           <FormInputError :error="errors.name" />
-        </fieldset>
+        </fieldset> -->
+        <FormInput :placeholder="'Nome'" :value="name" :error="errors.name" />
         <fieldset class="my-6">
           <input
             type="text"
             placeholder="Email"
             :class="[
               errors.email ? 'border-red-600' : 'border-primary',
-              'border-2  bg-blue-light p-4 rounded-lg placeholder-blue-500 w-full'
+              'border-2 bg-blue-light p-4 rounded-lg placeholder-blue-500 w-full'
             ]"
             v-model="email"
           />
@@ -34,7 +35,7 @@
             placeholder="Telefone"
             :class="[
               errors.phone ? 'border-red-600' : 'border-primary',
-              'border-2  bg-blue-light p-4 rounded-lg placeholder-blue-500 w-full'
+              'border-2 bg-blue-light p-4 rounded-lg placeholder-blue-500 w-full'
             ]"
             v-model="phone"
           />
@@ -65,13 +66,14 @@
 import Button from '@/components/theme/Button'
 import Alert from '@/components/theme/Alert'
 import FormInputError from '@/components/theme/FormInputError'
+import FormInput from '@/components/theme/FormInput'
 import BookMentorshipText from '@/components/BookMentorshipText'
-import leadsApi from '@/api/leads'
+// import leadsApi from '@/api/leads'
 import socialConfig from '@/config/social'
 
 export default {
   name: 'BookMentorship',
-  components: { Button, FormInputError, BookMentorshipText, Alert },
+  components: { Button, FormInput, FormInputError, BookMentorshipText, Alert },
   data: function() {
     return { ...this.resetData(), contactEmail: socialConfig.email, showAlert: false }
   },
@@ -86,13 +88,14 @@ export default {
     },
     async createLead() {
       this.showAlert = false
+      console.log(this.name, this.phone, this.email)
       this.errors.name = this.name ? false : 'Nome deve ser preenchido'
       this.errors.email = this.email ? false : 'Email deve ser preenchido'
       this.errors.phone = this.phone ? false : 'Telefone deve ser preenchido'
 
       if (!this.errors.name && !this.errors.email && !this.errors.phone) {
         try {
-          await leadsApi.create({ name: this.name, email: this.email, phone: this.phone })
+          // await leadsApi.create({ name: this.name, email: this.email, phone: this.phone })
           this.showAlert = true
           Object.assign(this, this.resetData())
         } catch (err) {
