@@ -1,7 +1,6 @@
 <template>
   <section id="book-mentorship" class="md:my-40 my-20">
     <div class="md:flex md:justify-center md:mx-6 m-0">
-      <!-- FIX: Mover inputs para componente FormInput com 2way data binding -->
       <BookMentorshipText class="md:hidden block" />
       <form @submit.prevent class="md:w-1/2 w-full md:mx-16 mt-5">
         <FormInput
